@@ -6,6 +6,7 @@ import "./styles.css";
 function ConsultaCatalogo() {
   const [produtos, setProdutos] = useState([]);
   const navigator = useNavigate();
+  const [mensagem, setMensagem] = useState("");
   useEffect(() => {
     getAllProdutos();
   }, []);
@@ -23,6 +24,7 @@ function ConsultaCatalogo() {
       })
       .catch((error) => {
         console.error(error);
+        setMensagem("Ocorreu um erro na exclusão de produto.");
       });
   }
   function getAllProdutos() {
@@ -32,7 +34,11 @@ function ConsultaCatalogo() {
       })
       .catch((error) => {
         console.error(error);
+        setMensagem("Ocorreu um erro na consulta de informações de produto.");
       });
+  }
+  function uploadImagem() {
+    navigator("/upload");
   }
   return (
     <div className="container">
@@ -40,6 +46,14 @@ function ConsultaCatalogo() {
       <button className="btn btn-primary mb-2" onClick={cadastrarProduto}>
         Cadastrar Produto
       </button>
+      <button
+        className="btn btn-primary mb-2"
+        onClick={uploadImagem}
+        style={{ marginLeft: "10px" }}
+      >
+        Upload de Imagem
+      </button>
+      {mensagem && <div className="alert alert-success">{mensagem}</div>}{" "}
       <table className="table table-striped table-bordered">
         <thead>
           <tr>

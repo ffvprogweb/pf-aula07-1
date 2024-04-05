@@ -11,6 +11,7 @@ function CadastrarProduto() {
   const [quantidadeNoEstoque, setQuantidadeNoEstoque] = useState("");
   const [custo, setCusto] = useState("");
   const { id } = useParams();
+  const [mensagem, setMensagem] = useState("");
   const [errors, setErrors] = useState({
     descricao: "",
     categoria: "",
@@ -29,6 +30,9 @@ function CadastrarProduto() {
         })
         .catch((error) => {
           console.error(error);
+          setMensagem(
+            "Ocorreu um erro na consulta para atualizar informações de produto."
+          );
         });
     }
   }, [id]);
@@ -57,6 +61,7 @@ function CadastrarProduto() {
           })
           .catch((error) => {
             console.error(error);
+            setMensagem("Ocorreu um erro ao atualizar o produto.");
           });
       } else {
         cadastroDeProduto(produto)
@@ -66,6 +71,7 @@ function CadastrarProduto() {
           })
           .catch((error) => {
             console.error(error);
+            setMensagem("Erro ao cadastrar o Produto.");
           });
       }
     }
@@ -114,6 +120,8 @@ function CadastrarProduto() {
         <div className="card">
           {pageTitle()}
           <div className="card-body">
+            {mensagem && <div className="alert alert-success">{mensagem}</div>}{" "}
+            {/* Renderiza o feedback se existir */}
             <form>
               <div className="form-group mb-2">
                 <label className="form-label" htmlFor="descricao">
