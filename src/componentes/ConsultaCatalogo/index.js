@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { listaDeProdutos, deleteProduto } from "../ProdutoServico";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
+import ConverteBase64ToImage from "../ConvertBase64ToImage";
 function ConsultaCatalogo() {
   const [produtos, setProdutos] = useState([]);
   const navigator = useNavigate();
@@ -62,6 +63,7 @@ function ConsultaCatalogo() {
             <th>Categoria</th>
             <th>Custo</th>
             <th>Quant</th>
+            <th>Produto</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -73,6 +75,12 @@ function ConsultaCatalogo() {
               <td>{produto.categoria}</td>
               <td>{produto.custo}</td>
               <td>{produto.quantidadeNoEstoque}</td>
+              <td>
+                <img
+                  src={ConverteBase64ToImage(produto.imagem)}
+                  alt="Imagem "
+                />
+              </td>
               <td>
                 <button
                   className="btn btn-info "

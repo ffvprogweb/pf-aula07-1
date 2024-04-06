@@ -5,9 +5,7 @@ import { upload } from "../ProdutoServico";
 const ImageUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [id, setId] = useState("");
-  /*const url = "http://localhost:8080/api/v1/produtos/imadb";*/
-  const url =
-    "https://produto-backend2-0bd4ca5d2150.herokuapp.com/api/v1/produtos/imadb";
+  const [mensagem, setMensagem] = useState("");
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
   };
@@ -23,22 +21,24 @@ const ImageUpload = () => {
       formData.append("file", selectedFile);
       formData.append("id", id);
 
-      upload
+      upload(formData)
         .then((response) => {
           console.log("Resposta da API:", response.data);
-          // Lidar com a resposta da API após o upload do arquivo
+          setMensagem(response.data);
         })
         .catch((error) => {
           console.error("Erro ao fazer upload:", error);
+          setMensagem("Ocorreu um erro no upload do arquivo", error.data);
         });
     } else {
-      console.log("Por favor, selecione um arquivo de imagem e forneça um ID.");
+      setMensagem("Por favor, selecione um arquivo de imagem e forneça um ID.");
     }
   };
 
   return (
     <div className="container mt-5">
       <h3>Upload de Imagem</h3>
+      {mensagem && <div className="alert alert-success">{mensagem}</div>}{" "}
       <form onSubmit={handleUpload} encType="multipart/form-data">
         <div className="mb-3">
           <label htmlFor="inputId" className="form-label">
