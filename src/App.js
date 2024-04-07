@@ -8,6 +8,7 @@ import UploadImagem from "./componentes/UploadImagem";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./componentes/Sidebar";
 function App() {
+  //sidebar
   return (
     <BrowserRouter>
       <div className="App" style={{ display: "flex" }}>
