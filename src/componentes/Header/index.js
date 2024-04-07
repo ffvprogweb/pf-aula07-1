@@ -1,13 +1,12 @@
 import React from "react";
+import "./styles.css";
 function Header() {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-dark bg-primary">
-          <a className="navbar-brand" href=" http://localhost:3000/">
-            Sistema Integrado de Gestão
-          </a>
-        </nav>
+        <a className="navbar-brand" href=" http://localhost:3000/">
+          Sistema Integrado de Gestão
+        </a>
       </header>
     </div>
   );

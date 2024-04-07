@@ -3,8 +3,8 @@ import "./styles.css";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer">
-        <span>Desenvolvimento Multiplataforma</span>
+      <footer>
+        <span>Programação Frontend</span>
       </footer>
     </div>
   );

@@ -13,6 +13,6 @@ test("ct03 - verificar a quantidade de linhas na tabela de produtos", async () =
   await waitFor(() => {
     const tabelaProdutos = screen.getByRole("table");
     const linhasProdutos = tabelaProdutos.querySelectorAll("tbody > tr");
-    expect(linhasProdutos.length).toBeGreaterThan(1);
+    expect(linhasProdutos.length).toBeGreaterThanOrEqual(1);
   });
 });

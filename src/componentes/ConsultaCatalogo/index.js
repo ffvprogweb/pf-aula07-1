@@ -11,9 +11,7 @@ function ConsultaCatalogo() {
   useEffect(() => {
     getAllProdutos();
   }, []);
-  function cadastrarProduto() {
-    navigator("/cad-produto");
-  }
+
   function atualizaProduto(id) {
     navigator(`/edit-produto/${id}`);
   }
@@ -38,22 +36,10 @@ function ConsultaCatalogo() {
         setMensagem("Ocorreu um erro na consulta de informações de produto.");
       });
   }
-  function uploadImagem() {
-    navigator("/upload");
-  }
+
   return (
     <div className="container">
       <h5 className="text-center">Consulta Catalogo </h5>
-      <button className="btn btn-primary mb-2" onClick={cadastrarProduto}>
-        Cadastrar Produto
-      </button>
-      <button
-        className="btn btn-primary mb-2"
-        onClick={uploadImagem}
-        style={{ marginLeft: "10px" }}
-      >
-        Upload de Imagem
-      </button>
       {mensagem && <div className="alert alert-success">{mensagem}</div>}{" "}
       <table className="table table-striped table-bordered">
         <thead>
