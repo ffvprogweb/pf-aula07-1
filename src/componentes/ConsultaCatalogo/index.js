@@ -64,7 +64,7 @@ function ConsultaCatalogo() {
               <td>
                 <img
                   src={ConverteBase64ToImage(produto.imagem)}
-                  alt="Imagem "
+                  alt="Imagem do produto"
                 />
               </td>
               <td>

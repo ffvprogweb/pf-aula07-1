@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { upload } from "../ProdutoServico";
 import "./styles.css";
 
-const ImageUpload = () => {
+function ImageUpload() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [id, setId] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -47,6 +47,7 @@ const ImageUpload = () => {
           </label>
           <input
             type="text"
+            placeholder="Entre com o código do produto"
             className="form-control input-control"
             id="inputId"
             value={id}
@@ -71,6 +72,6 @@ const ImageUpload = () => {
       </form>
     </div>
   );
-};
+}
 
 export default ImageUpload;

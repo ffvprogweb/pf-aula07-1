@@ -117,9 +117,9 @@ function CadastrarCliente() {
   }
   function pageTitle() {
     if (id) {
-      return <h2 className="text-center"> Atualizar Cliente</h2>;
+      return <h4 className="text-center"> Atualizar Cliente</h4>;
     } else {
-      return <h2 className="text-center"> Cadastrar Cliente</h2>;
+      return <h4 className="text-center"> Cadastrar Cliente</h4>;
     }
   }
   return (

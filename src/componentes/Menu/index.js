@@ -1,24 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./styles.css";
 
-function Sidebar1() {
-  const sidebarStyle = {
-    position: "fixed",
-    top: 0,
-    left: 0, // Definindo a posição à esquerda
-    height: "100vh",
-    width: "200px", // Largura do sidebar
-    backgroundColor: "#f0f0f0", // Cor de fundo do sidebar
-    padding: "20px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Sombra
-    zIndex: 1000, // Z-index para garantir que o sidebar esteja na frente de outros elementos
-  };
-
+function Menu() {
   return (
     <div>
-      <nav style={sidebarStyle}>
+      <nav className="sidebar">
         <h5> SIG - Menu </h5>
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul>
           <li>
             <Link to="/produtos">Consulta Produtos</Link>
           </li>
@@ -40,4 +29,4 @@ function Sidebar1() {
   );
 }
 
-export default Sidebar1;
+export default Menu;

@@ -6,7 +6,7 @@ import CadastrarCliente from "./componentes/CadastrarCliente";
 import ConsultaCliente from "./componentes/ConsultaCliente";
 import UploadImagem from "./componentes/UploadImagem";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar1 from "./componentes/Sidebar1";
+import Menu from "./componentes/Menu";
 function App() {
   return (
     <div>
@@ -16,7 +16,7 @@ function App() {
           <div className="App" style={{ display: "flex" }}>
             <div style={{ flex: 1 }}>
               <Header />
-              <Sidebar1 />
+              <Menu />
               <Routes>
                 <Route path="/" element={<ConsultaCatalogo />} />
                 <Route path="/produtos" element={<ConsultaCatalogo />} />
