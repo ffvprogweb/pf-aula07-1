@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { upload } from "../ProdutoServico";
+import "./styles.css";
 
 const ImageUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -37,7 +38,7 @@ const ImageUpload = () => {
 
   return (
     <div className="container mt-5">
-      <h3>Upload de Imagem</h3>
+      <h5>Upload de Imagem</h5>
       {mensagem && <div className="alert alert-success">{mensagem}</div>}{" "}
       <form onSubmit={handleUpload} encType="multipart/form-data">
         <div className="mb-3">
@@ -46,7 +47,7 @@ const ImageUpload = () => {
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-control"
             id="inputId"
             value={id}
             onChange={handleIdChange}
@@ -58,7 +59,7 @@ const ImageUpload = () => {
           </label>
           <input
             type="file"
-            className="form-control"
+            className="form-control input-control"
             id="inputFile"
             accept="image/*"
             onChange={handleFileChange}

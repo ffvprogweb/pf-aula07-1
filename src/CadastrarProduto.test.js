@@ -4,13 +4,13 @@ import App from "./App";
 test("ct01 - verificar o comportamento do cadastro de produto", async () => {
   render(<App />);
   await waitFor(() => {
-    const tituloElement1 = screen.getByText(/consulta catalogo/i);
-    expect(tituloElement1).toBeInTheDocument();
+    const textElement = screen.getByText(/sig - menu/i);
+    expect(textElement).toBeInTheDocument();
   });
   // Encontra o campo de entrada pela etiqueta associada (label)
-  const botaoCadastrar = screen.getByText("Cadastrar Produto");
+  const linkCadastrarProduto = screen.getByText("Cadastrar Produto");
   // Simula um click no botao
-  fireEvent.click(botaoCadastrar);
+  fireEvent.click(linkCadastrarProduto);
   await waitFor(() => {
     const tituloElement2 = screen.getByText(/cadastrar produto/i);
     expect(tituloElement2).toBeInTheDocument();

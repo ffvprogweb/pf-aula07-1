@@ -1,0 +1,9 @@
+/* Ajuste o tamanho das entradas de texto */
+.input-control {
+    width: 40%; /* Defina o tamanho desejado */
+  }
+  
+  /* Ajuste o tamanho do botão de envio */
+  .btn-submit {
+    width: 20%; /* Defina o tamanho desejado */
+  }

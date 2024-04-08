@@ -6,29 +6,36 @@ import CadastrarCliente from "./componentes/CadastrarCliente";
 import ConsultaCliente from "./componentes/ConsultaCliente";
 import UploadImagem from "./componentes/UploadImagem";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./componentes/Sidebar";
+import Sidebar1 from "./componentes/Sidebar1";
 function App() {
-  //sidebar
   return (
-    <BrowserRouter>
-      <div className="App" style={{ display: "flex" }}>
-        <Sidebar />
-        <div style={{ flex: 1 }}>
-          <Header />
-          <Routes>
-            <Route path="/" element={<ConsultaCatalogo />} />
-            <Route path="/produtos" element={<ConsultaCatalogo />} />
-            <Route path="/clientes" element={<ConsultaCliente />} />
-            <Route path="/cad-produto" element={<CadastrarProduto />} />
+    <div>
+      {/* Ajusta o marginLeft para coincidir com a largura da barra lateral */}
+      <div style={{ marginLeft: "200px", padding: "20px" }}>
+        <BrowserRouter>
+          <div className="App" style={{ display: "flex" }}>
+            <div style={{ flex: 1 }}>
+              <Header />
+              <Sidebar1 />
+              <Routes>
+                <Route path="/" element={<ConsultaCatalogo />} />
+                <Route path="/produtos" element={<ConsultaCatalogo />} />
+                <Route path="/clientes" element={<ConsultaCliente />} />
+                <Route path="/cad-produto" element={<CadastrarProduto />} />
 
-            <Route path="/edit-produto/:id" element={<CadastrarProduto />} />
-            <Route path="/cad-cliente" element={<CadastrarCliente />} />
-            <Route path="/upload" element={<UploadImagem />} />
-          </Routes>
-          <Footer />
-        </div>
+                <Route
+                  path="/edit-produto/:id"
+                  element={<CadastrarProduto />}
+                />
+                <Route path="/cad-cliente" element={<CadastrarCliente />} />
+                <Route path="/upload" element={<UploadImagem />} />
+              </Routes>
+              <Footer />
+            </div>
+          </div>
+        </BrowserRouter>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 export default App;

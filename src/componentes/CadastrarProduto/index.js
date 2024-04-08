@@ -108,9 +108,9 @@ function CadastrarProduto() {
   }
   function pageTitle() {
     if (id) {
-      return <h2 className="text-center"> Atualizar Produto</h2>;
+      return <h4 className="text-center"> Atualizar Produto</h4>;
     } else {
-      return <h2 className="text-center"> Cadastrar Produto</h2>;
+      return <h4 className="text-center"> Cadastro de Produto</h4>;
     }
   }
   return (
