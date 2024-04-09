@@ -2,8 +2,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
 
 test("ct01 - verificar o comportamento da função consulta catalogo com sucesso", () => {
-  render(<App />);
-  const textElement = screen.getByText(/consulta catalogo/i);
+  //dado que a aplicação foi renderizada
+  const { getByText } = render(<App />);
+
+  const textElement = getByText(/consulta catalogo/i); //lança o erro se não encontrar (find gera undefined)
   expect(textElement).toBeInTheDocument();
 });
 

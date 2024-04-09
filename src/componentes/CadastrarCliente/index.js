@@ -80,7 +80,7 @@ function CadastrarCliente() {
           })
           .catch((error) => {
             console.error(error);
-            setMensagem("Erro no cadastro.");
+            setMensagem("Erro no cadastro.", error);
           });
       }
     }

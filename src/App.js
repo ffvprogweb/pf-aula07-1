@@ -28,6 +28,10 @@ function App() {
                   element={<CadastrarProduto />}
                 />
                 <Route path="/cad-cliente" element={<CadastrarCliente />} />
+                <Route
+                  path="/edit-cliente/:id"
+                  element={<CadastrarCliente />}
+                />
                 <Route path="/upload" element={<UploadImagem />} />
               </Routes>
               <Footer />
