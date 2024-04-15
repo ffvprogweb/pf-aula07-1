@@ -35,6 +35,10 @@ function Menu() {
             <FontAwesomeIcon icon={faUpload} />
             <Link to="/upload">Upload de Imagem</Link>
           </li>
+          <li>
+            <FontAwesomeIcon icon={faUpload} />
+            <Link to="/relatorios">Relatórios</Link>
+          </li>
         </ul>
       </nav>
     </div>

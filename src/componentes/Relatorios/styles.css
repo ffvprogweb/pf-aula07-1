@@ -1,0 +1,12 @@
+.button-container {
+    
+    display: flex;
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    margin-top: 20px; /* Espaço superior para separar do gráfico */
+    margin-left: 120px; /* Espaço superior para separar do gráfico */
+    margin-right: 120px; /* Espaço superior para separar do gráfico */
+    
+    
+  }
+  
+ 

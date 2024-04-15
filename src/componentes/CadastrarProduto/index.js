@@ -4,6 +4,7 @@ import {
   obtemProduto,
   updateProduto,
 } from "../ProdutoServico";
+
 import { useNavigate, useParams } from "react-router-dom";
 function CadastrarProduto() {
   const [descricao, setDescricao] = useState("");
@@ -19,6 +20,7 @@ function CadastrarProduto() {
     custo: "",
   });
   const navigator = useNavigate();
+
   useEffect(() => {
     if (id) {
       obtemProduto(id)
@@ -50,6 +52,7 @@ function CadastrarProduto() {
   }
   function saveOrUpdateProduto(e) {
     e.preventDefault();
+
     if (validateForm()) {
       const produto = { descricao, categoria, quantidadeNoEstoque, custo };
       console.log(produto);

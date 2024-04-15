@@ -1,3 +1,5 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ConsultaCatalogo from "./componentes/ConsultaCatalogo";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
@@ -5,16 +7,21 @@ import CadastrarProduto from "./componentes/CadastrarProduto";
 import CadastrarCliente from "./componentes/CadastrarCliente";
 import ConsultaCliente from "./componentes/ConsultaCliente";
 import UploadImagem from "./componentes/UploadImagem";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./componentes/Menu";
+import Relatorios from "./componentes/Relatorios";
+import DataContext, { data } from "./componentes/DataContext";
+import "./App.css"; // Importa o arquivo CSS
+import { useState } from "react";
 function App() {
+  const [state, setState] = useState(data);
   return (
-    <div>
-      {/* Ajusta o marginLeft para coincidir com a largura da barra lateral */}
-      <div style={{ marginLeft: "200px", padding: "20px" }}>
-        <BrowserRouter>
-          <div className="App" style={{ display: "flex" }}>
-            <div style={{ flex: 1 }}>
+    <DataContext.Provider value={{ state, setState }}>
+      <div className="App">
+        {/* Usa a classe 'App' para aplicar estilos */}
+        <div className="content">
+          {/* Usa a classe 'content' para aplicar estilos */}
+          <BrowserRouter>
+            <div>
               <Header />
               <Menu />
               <Routes>
@@ -28,18 +35,16 @@ function App() {
                   element={<CadastrarProduto />}
                 />
                 <Route path="/cad-cliente" element={<CadastrarCliente />} />
-                <Route
-                  path="/edit-cliente/:id"
-                  element={<CadastrarCliente />}
-                />
                 <Route path="/upload" element={<UploadImagem />} />
+                <Route path="/relatorios" element={<Relatorios />} />
               </Routes>
               <Footer />
             </div>
-          </div>
-        </BrowserRouter>
+          </BrowserRouter>
+        </div>
       </div>
-    </div>
+    </DataContext.Provider>
   );
 }
+
 export default App;
