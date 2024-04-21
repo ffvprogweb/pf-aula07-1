@@ -17,7 +17,7 @@ function Menu() {
         <ul>
           <li>
             <FontAwesomeIcon icon={faList} />
-            <Link to="/produtos">Consulta Produtos</Link>
+            <Link to="/produtos"> Consulta Produtos</Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faUser} />
@@ -25,19 +25,19 @@ function Menu() {
           </li>
           <li>
             <FontAwesomeIcon icon={faPlus} />
-            <Link to="/cad-produto">Cadastrar Produto</Link>
+            <Link to="/cad-produto"> Cadastrar Produto</Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faPlus} />
-            <Link to="/cad-cliente">Cadastrar Cliente</Link>
+            <Link to="/cad-cliente"> Cadastrar Cliente</Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faUpload} />
-            <Link to="/upload">Upload de Imagem</Link>
+            <Link to="/upload"> Upload de Imagem</Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faUpload} />
-            <Link to="/relatorios">Relatórios</Link>
+            <Link to="/relatorios"> Relatórios</Link>
           </li>
         </ul>
       </nav>

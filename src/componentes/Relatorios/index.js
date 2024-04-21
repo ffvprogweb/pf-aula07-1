@@ -44,6 +44,8 @@ function Relatorios() {
   }
   return (
     <>
+      <h5 className="titulo"> Relatorio Estoque Imobilizado X Vendas</h5>
+
       <Chart
         chartType="AreaChart"
         width="100%"
@@ -51,8 +53,12 @@ function Relatorios() {
         data={data}
         options={options}
       />
-      <div className="button-container">
-        <button onClick={() => setAno(["2016", 500, valorAno])}>
+      <div>
+        <button
+          className="button"
+          id="atualiza"
+          onClick={() => setAno(["2016", 500, valorAno])}
+        >
           Atualiza
         </button>
       </div>

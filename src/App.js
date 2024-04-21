@@ -34,6 +34,11 @@ function App() {
                   path="/edit-produto/:id"
                   element={<CadastrarProduto />}
                 />
+                <Route
+                  path="/edit-cliente/:id"
+                  element={<CadastrarCliente />}
+                />
+
                 <Route path="/cad-cliente" element={<CadastrarCliente />} />
                 <Route path="/upload" element={<UploadImagem />} />
                 <Route path="/relatorios" element={<Relatorios />} />

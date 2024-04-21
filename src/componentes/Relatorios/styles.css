@@ -1,12 +1,16 @@
-.button-container {
-    
-    display: flex;
-    justify-content: center; /* Alinha o conteúdo horizontalmente */
-    margin-top: 20px; /* Espaço superior para separar do gráfico */
-    margin-left: 120px; /* Espaço superior para separar do gráfico */
-    margin-right: 120px; /* Espaço superior para separar do gráfico */
-    
-    
+.titulo{
+  text-align: center;
+}
+.button {
+     
+  margin-top: 25px; /* Espaço superior para separar do gráfico */
+  margin-left: 690px; 
+  margin-right: 120px; 
+  background-color: rgb(128, 164, 220);
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+
   
  
