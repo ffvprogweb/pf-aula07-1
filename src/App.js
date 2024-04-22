@@ -12,6 +12,7 @@ import Relatorios from "./componentes/Relatorios";
 import DataContext, { data } from "./componentes/DataContext";
 import "./App.css"; // Importa o arquivo CSS
 import { useState } from "react";
+/* gerenciamento das rotas*/
 function App() {
   const [state, setState] = useState(data);
   return (
