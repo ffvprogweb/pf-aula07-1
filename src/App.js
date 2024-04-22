@@ -1,17 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ConsultaCatalogo from "./componentes/ConsultaCatalogo";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
-import CadastrarProduto from "./componentes/CadastrarProduto";
-import CadastrarCliente from "./componentes/CadastrarCliente";
-import ConsultaCliente from "./componentes/ConsultaCliente";
-import UploadImagem from "./componentes/UploadImagem";
+import ProdutoCadastrar from "./componentes/ProdutoCadastrar";
+import ClienteCadastrar from "./componentes/ClienteCadastrar";
+import ClienteConsulta from "./componentes/ClienteConsulta";
+import ProdutoUploadImagem from "./componentes/ProdutoUploadImagem";
 import Menu from "./componentes/Menu";
 import Relatorios from "./componentes/Relatorios";
 import DataContext, { data } from "./componentes/DataContext";
-import "./App.css"; // Importa o arquivo CSS
-import { useState } from "react";
+import "./App.css";
+
 /* gerenciamento das rotas*/
 function App() {
   const [state, setState] = useState(data);
@@ -28,20 +28,20 @@ function App() {
               <Routes>
                 <Route path="/" element={<ConsultaCatalogo />} />
                 <Route path="/produtos" element={<ConsultaCatalogo />} />
-                <Route path="/clientes" element={<ConsultaCliente />} />
-                <Route path="/cad-produto" element={<CadastrarProduto />} />
+                <Route path="/clientes" element={<ClienteConsulta />} />
+                <Route path="/cad-produto" element={<ProdutoCadastrar />} />
 
                 <Route
                   path="/edit-produto/:id"
-                  element={<CadastrarProduto />}
+                  element={<ProdutoCadastrar />}
                 />
                 <Route
                   path="/edit-cliente/:id"
-                  element={<CadastrarCliente />}
+                  element={<ClienteCadastrar />}
                 />
 
-                <Route path="/cad-cliente" element={<CadastrarCliente />} />
-                <Route path="/upload" element={<UploadImagem />} />
+                <Route path="/cad-cliente" element={<ClienteCadastrar />} />
+                <Route path="/upload" element={<ProdutoUploadImagem />} />
                 <Route path="/relatorios" element={<Relatorios />} />
               </Routes>
               <Footer />

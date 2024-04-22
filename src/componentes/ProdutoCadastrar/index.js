@@ -6,7 +6,7 @@ import {
 } from "../ProdutoServico";
 
 import { useNavigate, useParams } from "react-router-dom";
-function CadastrarProduto() {
+function ProdutoCadastrar() {
   const [descricao, setDescricao] = useState("");
   const [categoria, setCategoria] = useState("");
   const [quantidadeNoEstoque, setQuantidadeNoEstoque] = useState("");
@@ -216,4 +216,4 @@ function CadastrarProduto() {
     </div>
   );
 }
-export default CadastrarProduto;
+export default ProdutoCadastrar;

@@ -5,7 +5,7 @@ import {
   updateCliente,
 } from "../ClienteServico";
 import { useNavigate, useParams } from "react-router-dom";
-function CadastrarCliente() {
+function ClienteCadastrar() {
   const [cpf, setCpf] = useState("");
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -217,4 +217,4 @@ function CadastrarCliente() {
     </div>
   );
 }
-export default CadastrarCliente;
+export default ClienteCadastrar;
