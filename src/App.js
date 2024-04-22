@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ConsultaCatalogo from "./componentes/ConsultaCatalogo";
+import ProdutoConsulta from "./componentes/ProdutoConsulta";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 import ProdutoCadastrar from "./componentes/ProdutoCadastrar";
@@ -26,8 +26,8 @@ function App() {
               <Header />
               <Menu />
               <Routes>
-                <Route path="/" element={<ConsultaCatalogo />} />
-                <Route path="/produtos" element={<ConsultaCatalogo />} />
+                <Route path="/" element={<ProdutoConsulta />} />
+                <Route path="/produtos" element={<ProdutoConsulta />} />
                 <Route path="/clientes" element={<ClienteConsulta />} />
                 <Route path="/cad-produto" element={<ProdutoCadastrar />} />
 
