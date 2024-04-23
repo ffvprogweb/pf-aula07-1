@@ -3,7 +3,7 @@ import { render, fireEvent, waitFor } from "@testing-library/react";
 import ProdutoUploadImagem from "./componentes/ProdutoUploadImagem"; // Importe o componente ImageUpload
 
 describe("ImageUpload Component", () => {
-  it("deve exibir mensagem de erro ao enviar imagem com ID branco", async () => {
+  it("ct-01 deve exibir mensagem de erro ao enviar imagem com id branco", async () => {
     const { getByText, getByRole } = render(<ProdutoUploadImagem />);
 
     const button = getByRole("button", { name: /Enviar/i });
@@ -16,12 +16,12 @@ describe("ImageUpload Component", () => {
     );
   });
 
-  it("deve exibir mensagem de sucesso id e arquivo valido", async () => {
+  it("ct02 - deve exibir mensagem de sucesso quando id e arquivo sao validos", async () => {
     const { getByLabelText, getByRole, getByText } = render(
       <ProdutoUploadImagem />
     );
 
-    const file = new File(["(blob)"], "E:imagens/produto1.png", {
+    const file = new File(["(produto1)"], "E:imagens/produto1.png", {
       type: "image/png",
     });
     const inputFile = getByLabelText("Escolher arquivo de imagem");
@@ -38,7 +38,7 @@ describe("ImageUpload Component", () => {
     );
   });
 
-  it("deve enviar mensagem de erro ao enviar imagem para id nao cadastrado", async () => {
+  it("ct-03 deve enviar mensagem de erro para imagem com id nao cadastrado", async () => {
     const { getByLabelText, getByRole, getByText } = render(
       <ProdutoUploadImagem />
     );

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Chart } from "react-google-charts";
-import DataContext from "../../componentes/DataContext";
+import DataContext from "../DataContext";
 import { consultaImobilizado } from "../ProdutoServico";
 import "./styles.css";
 

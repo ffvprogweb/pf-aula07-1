@@ -8,7 +8,7 @@ import ClienteCadastrar from "./componentes/ClienteCadastrar";
 import ClienteConsulta from "./componentes/ClienteConsulta";
 import ProdutoUploadImagem from "./componentes/ProdutoUploadImagem";
 import Menu from "./componentes/Menu";
-import Relatorios from "./componentes/Relatorios";
+import ProdutoRelatorios from "./componentes/ProdutoRelatorios";
 import DataContext, { data } from "./componentes/DataContext";
 import "./App.css";
 
@@ -42,7 +42,7 @@ function App() {
 
                 <Route path="/cad-cliente" element={<ClienteCadastrar />} />
                 <Route path="/upload" element={<ProdutoUploadImagem />} />
-                <Route path="/relatorios" element={<Relatorios />} />
+                <Route path="/relatorios" element={<ProdutoRelatorios />} />
               </Routes>
               <Footer />
             </div>
