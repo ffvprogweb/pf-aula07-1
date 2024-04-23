@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProdutoConsulta from "./componentes/ProdutoConsulta";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
+import Menu from "./componentes/Menu";
+import DataContext, { data } from "./componentes/DataContext";
+import ProdutoConsulta from "./componentes/ProdutoConsulta";
 import ProdutoCadastrar from "./componentes/ProdutoCadastrar";
 import ClienteCadastrar from "./componentes/ClienteCadastrar";
 import ClienteConsulta from "./componentes/ClienteConsulta";
 import ProdutoUploadImagem from "./componentes/ProdutoUploadImagem";
-import Menu from "./componentes/Menu";
 import ProdutoRelatorios from "./componentes/ProdutoRelatorios";
-import DataContext, { data } from "./componentes/DataContext";
 import "./App.css";
 
 /* gerenciamento das rotas*/

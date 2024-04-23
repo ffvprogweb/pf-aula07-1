@@ -1,6 +1,8 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
-
+beforeAll(() => {
+  return console.log("teste inicializado");
+});
 test("ct01 - verificar o comportamento da função consulta catalogo com sucesso", () => {
   //dado que o estado inicial da aplicação é renderizado na consulta de produtos
   const { getByText } = render(<App />);
