@@ -36,7 +36,7 @@ function Menu() {
             <Link to="/upload"> Upload de Imagem</Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUpload} />
+            <FontAwesomeIcon icon={faList} />
             <Link to="/relatorios"> Relatórios</Link>
           </li>
         </ul>

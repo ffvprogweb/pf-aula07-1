@@ -53,7 +53,7 @@ function Relatorios() {
         data={data}
         options={options}
       />
-      <div>
+      <div className="button-container">
         <button
           className="button"
           id="atualiza"
