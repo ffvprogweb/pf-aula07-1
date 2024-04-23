@@ -28,7 +28,7 @@ describe("ImageUpload Component", () => {
     fireEvent.change(inputFile, { target: { files: [file] } });
 
     const inputId = getByLabelText("ID:");
-    fireEvent.change(inputId, { target: { value: "1" } });
+    fireEvent.change(inputId, { target: { value: "2" } });
 
     const button = getByRole("button", { name: /Enviar/i });
     fireEvent.click(button);
